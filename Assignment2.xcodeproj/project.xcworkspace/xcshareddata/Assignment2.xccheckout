@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>CBAF4F0F-3303-4D40-9AAB-11139508D377</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Assignment2</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D5A319AE-E325-44C7-89E9-AAD30F738986</key>
+		<string>https://bitbucket.org/rpithadia25/cs646-ios-development.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Assignment2.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D5A319AE-E325-44C7-89E9-AAD30F738986</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://bitbucket.org/rpithadia25/cs646-ios-development.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D5A319AE-E325-44C7-89E9-AAD30F738986</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D5A319AE-E325-44C7-89E9-AAD30F738986</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Assignment2</string>
+		</dict>
+	</array>
+</dict>
+</plist>
