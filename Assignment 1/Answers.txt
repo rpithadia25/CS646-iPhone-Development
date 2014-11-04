@@ -1,0 +1,24 @@
+Answers:
+
+2. The control jumps out of the "for" loop as the condition is not satisfied.
+
+4. x4 = 10
+
+6. The "sin" function took 8.2% of the time (46 ms)
+   The "printf" function took 89.3% of time (497 ms)
+
+7. The method "description" was added to the class NSObject in iOS 2.0
+
+8. stringWithContentsOfURL:encoding:error: OR stringWithContentsOfURL:usedEncoding:error: are to be used instead.
+This method interprets the contents as Unicode if it starts with a byte-order mark (U+FEFF or U+FFFE) and as UTF-8 
+if the contents begin with a byte-order mark (EFBBBF). The default C string encoding varies according to the user's 
+configuration. And so one should only use this method if Unicode or UTF-8 encoding is used or if the default C
+string encoding can be verified. Hence this method was deprecated in iOS 2.0
+
+9. valueForKey:   When using key-value coding, the key should be a string.
+                  If the key does not start with "@", it invokes objectForKey. If it does include "@", strips "@"
+                  and invokes [super valueForKey:]
+
+   objectForKey:  The return value can also be "nil"
+   
+10. NSObject, NSCopying, NSFastEnumeration, NSMutableCopying and NSSecureCoding.
