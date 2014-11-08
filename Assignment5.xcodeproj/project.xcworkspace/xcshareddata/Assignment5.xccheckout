@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>21723701-07CB-4423-A1FD-F1F82A61700C</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E6A5267DD033C8270CBB6CE4BC57F801AD6582E4</key>
+		<string>https://github.com/rpithadia25/CS646-iPhone-Development.git</string>
+	</dict>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E6A5267DD033C8270CBB6CE4BC57F801AD6582E4</key>
+		<string>Assignment5/</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/rpithadia25/CS646-iPhone-Development.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E6A5267DD033C8270CBB6CE4BC57F801AD6582E4</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E6A5267DD033C8270CBB6CE4BC57F801AD6582E4</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Assignment5</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -24,4 +24,20 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 1;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *Cell = @"Cell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: Cell];
+    if (cell == nil) {
+        
+    }
+    return cell;
+}
+
 @end
