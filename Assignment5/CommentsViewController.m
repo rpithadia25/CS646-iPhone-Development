@@ -27,11 +27,11 @@
     self.navigationItem.rightBarButtonItem = addCommentButton;
     
     [self fetchComments];
-    
 }
 
 -(void)fetchComments
 {
+    [self.commentsData removeAllObjects];
     NSURLSession *session = [NSURLSession sharedSession];
     NSString *url = [NSString stringWithFormat:@"http://bismarck.sdsu.edu/rateme/comments/%@", self.instructor.instructorId];
     [[session dataTaskWithURL:[NSURL URLWithString:url]
@@ -61,20 +61,20 @@
     [self.textView resignFirstResponder];
     
     NSString *comment = self.textView.text;
-    NSData *commentData = [comment dataUsingEncoding:NSUTF8StringEncoding];
-    NSString *postLength = [NSString stringWithFormat:@"%lu", (unsigned long)[commentData length]];
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc]init];
-    [request setURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://bismarck.sdsu.edu/rateme/comment/%@", self.instructor.instructorId]]];
     
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://bismarck.sdsu.edu/rateme/comment/%@", self.instructor.instructorId]];
+    NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:config];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     [request setHTTPMethod:@"POST"];
-    [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
-    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-    [request setHTTPBody:commentData];
-    NSURLConnection *connection = [[NSURLConnection alloc]initWithRequest:request delegate:self];
+    [request setHTTPBody:[comment dataUsingEncoding:NSUTF8StringEncoding]];
     
-    if (connection) {
+    NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         [self fetchComments];
-    }
+    }];
+    
+    [dataTask resume];
+    
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -117,15 +117,5 @@
         [self.textView resignFirstResponder];
     }
 }
-
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
 
 @end

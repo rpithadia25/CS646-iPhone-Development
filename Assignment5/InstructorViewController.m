@@ -102,12 +102,12 @@
         NSArray *array = [self.instructorData objectAtIndex:indexPath.section];
         NSArray *ratings = [array objectAtIndex:indexPath.row];
         NSNumber *averageRating = [ratings objectAtIndex:0];
-        NSString *totalRatings = [NSString stringWithFormat:@"%@", [ratings objectAtIndex:1]];
-        float decimalValue = [averageRating floatValue] - [averageRating integerValue];
+        NSString *totalRatings = [NSString stringWithFormat:@"#%@", [ratings objectAtIndex:1]];
+        float decimal = [averageRating floatValue] - [averageRating integerValue];
         
-        if (decimalValue > 0.66) {
+        if (decimal > 0.66) {
             averageRating = [NSNumber numberWithInteger:([averageRating integerValue] + 1)];
-        } else if(decimalValue > 0.33){
+        } else if(decimal > 0.33){
             averageRating = [NSNumber numberWithFloat:([averageRating integerValue] + 0.5)];
         } else {
             averageRating = [NSNumber numberWithFloat:[averageRating integerValue]];

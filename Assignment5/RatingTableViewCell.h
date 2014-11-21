@@ -10,6 +10,7 @@
 #import "RateView.h"
 
 @interface RatingTableViewCell : UITableViewCell
+
 @property (strong, nonatomic) IBOutlet RateView *rating;
 @property (strong, nonatomic) IBOutlet UILabel *ratingLabel;
 
